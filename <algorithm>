@@ -1,2 +1,2 @@
 max_val;
-abs -->header gives absolute integer value
+abs -->header gives absolute integer value in #include<stdlib.h>
