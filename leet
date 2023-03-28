@@ -1,4 +1,4 @@
 1.windows sliding solution --> max number of 1's in an array
 2.to find the number of digits --> 1. divide by 10 repeatdely or 2. use log10(n)+1
 3.to sort the nums vector --> sort(nums.begin(),nums.end())
-4. to declare a vector --> vector<int>name=(size,assinging value)
+4. to declare a vector --> vector<int>name=(size,assinging value)//no eroors in leet 
