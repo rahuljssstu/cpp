@@ -2,3 +2,4 @@
 2.to find the number of digits --> 1. divide by 10 repeatdely or 2. use log10(n)+1
 3.to sort the nums vector --> sort(nums.begin(),nums.end())
 4. to declare a vector --> vector<int>name=(size,assinging value)//no eroors in leet 
+5.to find the doouble exists or no use maps and treeset in stl 
