@@ -30,3 +30,64 @@ class Solution{
     }
 };
 **********************************************************************************************************************************************
+2.)if the two linked lists are identical or not 
+bool areIdentical(struct Node *head1, struct Node *head2)
+{
+    // Code here
+    Node * temp1=head1;
+    Node *temp2=head2;
+    
+    while(temp1!=NULL && temp2!=NULL)
+    {
+        if(temp1->data==temp2->data)
+        {
+            temp1=temp1->next;
+            temp2=temp2->next;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    if(temp1==NULL && temp2==NULL) return true;
+    else return false;
+}
+*********************************************************************************************************************************************
+3.)to remove a node from linked list with no header node and given only node address
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        ListNode *temp;
+        temp=node->next;
+        node->val=temp->val;
+        node->next=temp->next;
+
+        
+    }
+};
+********************************************************************************************************************************************
+4.)remove duplicates from linked list:-
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+       ListNode *curr=head;;
+       while(curr != NULL && curr->next != NULL )
+       {
+           if(curr->val == curr->next->val)
+           {
+               ListNode *temp=curr->next;;
+               curr->next=curr->next->next;
+               delete(temp);
+
+           }
+           else
+           {
+               curr=curr->next;
+           }
+       }
+       return head;
+
+    }
+};
+*********************************************************************************************************************************************
+5.)
