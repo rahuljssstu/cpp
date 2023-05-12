@@ -209,4 +209,37 @@ class Solution{
     }
 };
 *******************************************************************************************************************************************************************
-8.)
+8.)of arr1 is big ans arr2 is small print all the elements from arr1 and are present in arr2 , and print the remaining elements in sorted manner(mind repetition)
+class Solution {
+public:
+    vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
+        vector<int>ans;
+        map<int,int>mp;
+
+        for(auto x : arr1)
+            mp[x]++;
+        
+        for(auto temp : arr2)
+        {
+            if(mp.find(temp) != mp.end())
+            {
+                auto x = mp.find(temp);
+                int count = x->second;
+                vector<int>v(count,temp);//(kitni bar yeh ,aur kya kitni bar hein)
+                ans.insert(ans.end(),v.begin(),v.end());
+                mp.erase(temp);
+
+            }
+        }
+        for(auto x : mp )
+        {
+            int ele=x.first;
+            int count=x.second;
+            vector<int>v(count,ele);
+            ans.insert(ans.end(),v.begin(),v.end());
+        }
+        return ans;
+    }
+};
+*********************************************************************************************************************************************************************
+9.)
