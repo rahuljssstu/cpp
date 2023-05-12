@@ -278,4 +278,35 @@ public:
     }
 };
 *******************************************************************************************************************************************************************
-11.)
+11.)arrange the string s in te order as string (order) and rest of the elements in lexographical order
+class Solution {
+public:
+    string customSortString(string order, string s) {
+        map<int,int>mp;
+        string ans="";
+
+        for(auto x : s)
+            mp[x]++;
+        
+        for(auto x : order)
+        {
+            if(mp.find(x) != mp.end())
+            {
+                auto temp = mp.find(x);
+                int count = temp->second;
+                string s(count,x);
+                ans = ans+s;
+                mp.erase(x);
+                
+            }
+        }
+        for(auto x : mp)
+        {
+            string s(x.second,x.first);
+            ans = ans+s;
+        }
+        return ans;
+    }
+};
+********************************************************************************************************************************************************************
+12.)
