@@ -148,4 +148,26 @@ public:
     }
 };
 ********************************************************************************************************************************************************************
-7.)
+7.)to swap the kth element from the beginnig and from the last in the linked list
+class Solution {
+public:
+    ListNode* swapNodes(ListNode* head, int k) {
+        ListNode * slow = head;
+        ListNode * fast = head;
+
+        while(--k)
+        {
+            fast=fast->next;
+        }
+        ListNode * first = fast;
+        while(fast->next != NULL)
+        {
+            fast=fast->next;
+            slow=slow->next;
+        }
+        swap(first->val,slow->val);
+        return head;
+    }
+};
+*******************************************************************************************************************************************************************
+8.)
