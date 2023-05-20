@@ -170,4 +170,48 @@ public:
     }
 };
 *******************************************************************************************************************************************************************
-8.)
+8.)to reverse a linked list 
+https://leetcode.com/problems/reverse-linked-list/
+
+method 1: by using vectors
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+      vector<int>data;
+      for(ListNode *curr =head;curr!=NULL;curr=curr->next)
+      {
+          data.push_back(curr->val);
+      }  
+      for(ListNode * curr=head;curr!=NULL;curr=curr->next)
+      {
+          curr->val=data.back();
+          data.pop_back();
+
+      }
+      return head;
+    }
+};
+
+method 2 : in single iteration 
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+      vector<int>data;
+      for(ListNode *curr =head;curr!=NULL;curr=curr->next)
+      {
+          data.push_back(curr->val);
+      }  
+      for(ListNode * curr=head;curr!=NULL;curr=curr->next)
+      {
+          curr->val=data.back();
+          data.pop_back();
+
+      }
+      return head;
+    }
+};
+**********************************************************************************************************************************************************************
+9.)
+
+
+
